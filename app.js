@@ -37,5 +37,14 @@ app.use(function(err, req, res, next) {
   res.status(err.status || 500);
   res.render('error');
 });
+// const {Users, Friends} = require('./models')
+// const test = async ()=> {
+//   const user = await Users.findAll({
+//     include: Friends
+//   },
+// )
+//   console.log(user[1].Friends)
+// }
+// test() 
 
-module.exports = app;
+module.exports = app; 
