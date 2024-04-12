@@ -14,6 +14,9 @@ module.exports = {
       },
       image: {
         type: Sequelize.STRING
+      },
+      public: {
+        type: Sequelize.BOOLEAN
       }
     });
   },

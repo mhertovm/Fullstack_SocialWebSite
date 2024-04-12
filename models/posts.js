@@ -11,11 +11,14 @@ module.exports = (sequelize, DataTypes) => {
      */
     static associate(models) {
       // define association here
+      Posts.hasMany(models.Likes, {foreignKey: "post_id"});
+      Posts.hasMany(models.Comments, {foreignKey: "post_id"});
     }
   }
   Posts.init({
     description: DataTypes.STRING,
-    image: DataTypes.STRING
+    image: DataTypes.STRING,
+    public: DataTypes.BOOLEAN
   }, {
     sequelize,
     timestamps: false,

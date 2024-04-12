@@ -13,6 +13,8 @@ module.exports = (sequelize, DataTypes) => {
       // define association here
       Users.hasMany(models.Friends, {foreignKey: "user_id"});
       Users.hasMany(models.Friends, {foreignKey: "friend_id"});
+      Users.hasMany(models.Likes, {foreignKey: "user_id"});
+      Users.hasMany(models.Comments, {foreignKey: "user_id"});
     }
   }
   Users.init({
